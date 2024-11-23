@@ -59,7 +59,7 @@
     &mt HASH Q   &mt N1 W   &mt N2 E    &mt N3 R   &mt LPAR T   &mt RPAR Y        &mt UNDER U      &mt MINUS I      &mt PLUS O       &mt AT P
     &mt STAR A   &mt N4 S   &mt N5 D    &mt N6 F   &mt SLASH G  &mt COLON H       &mt SEMI J       &mt APOS K       &mt DQT L        &kp BSPC
     &sk LSHFT    &mt N7 Z   &mt N8 X    &mt N9 C   &mt QMARK V  &mt EXCL B        &mt COMMA N      &mt DOT M        &mt SEMI DLLR    &kp ENTER
-    &kp LCTRL               &kp LALT                            &kp SPACE                          &to SYM                          &to UPPER
+    &kp LCTRL               &mt N0 LALT                         &kp SPACE                          &to SYM                          &to UPPER
             >;
         };
 
