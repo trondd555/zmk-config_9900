@@ -50,6 +50,8 @@
             key-positions = <27 40>;
             bindings = <&to SYM>;
         };
+    };
+    combos {
         combo_to_def {
             timeout-ms = <50>;
             key-positions = <27 41>;
