@@ -50,10 +50,10 @@
             key-positions = <27 40>;
             bindings = <&to SYM>;
         };
-        combo_to_def {
+        combo_to_upper {
             timeout-ms = <50>;
             key-positions = <27 41>;
-            bindings = <&to DEF>;
+            bindings = <&to UPPER>;
         };
     };
 
