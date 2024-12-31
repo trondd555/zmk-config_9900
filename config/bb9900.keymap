@@ -33,6 +33,18 @@
             tapping-term-ms = <400>;
             bindings = <&mkp LCLK>, <&bt BT_CLR>;
         };
+        td1: tap_dance_1 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <400>;
+            bindings = <&sl SYM>, <&to SYM>;
+        };
+        td2: tap_dance_2 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <400>;
+            bindings = <&sl UPPER>, <&to UPPER>;
+        };
     };
     behaviors {
         hm: homerow_mods {
@@ -40,20 +52,6 @@
             #binding-cells = <2>;
             tapping-term-ms = <500>;
             bindings = <&out &kp>;
-        };
-    };
-
-    combos {
-        compatible = "zmk,combos";
-        combo_to_sym {
-            timeout-ms = <50>;
-            key-positions = <27 40>;
-            bindings = <&to SYM>;
-        };
-        combo_to_upper {
-            timeout-ms = <50>;
-            key-positions = <27 41>;
-            bindings = <&to UPPER>;
         };
     };
 
@@ -77,7 +75,7 @@
     &kp Q        &kp W      &kp E       &kp R      &kp T        &kp Y             &kp U            &kp I            &kp O            &kp P
     &kp A        &kp S      &kp D       &kp F      &kp G        &kp H             &kp J            &kp K            &kp L            &kp BSPC
     &sk LSHFT    &kp Z      &kp X       &kp C      &kp V        &kp B             &kp N            &kp M            &kp DLLR         &kp ENTER
-    &kp LCTRL               &kp LALT                         &kp SPACE                          &sl SYM                          &sl UPPER
+    &kp LCTRL               &kp LALT                         &kp SPACE                          &td1                          &td2
             >;
         };
 
@@ -90,7 +88,7 @@
     &kp HASH     &kp N1     &kp N2      &kp N3    &mt LBKT LPAR &mt RBKT RPAR     &kp UNDER        &kp MINUS        &kp PLUS         &kp AT
     &kp STAR     &kp N4     &kp N5      &kp N6    &kp SLASH     &kp COLON         &kp SEMI         &kp APOS         &kp DQT          &kp DEL
     &sk LSHFT    &kp N7     &kp N8      &kp N9    &kp QMARK     &kp EXCL          &kp COMMA        &kp DOT          &kp C_MUTE       &kp ENTER
-    &kp LCTRL               &kp N0                              &kp SPACE                          &to DEF                          &sl UPPER
+    &kp LCTRL               &kp N0                              &kp SPACE                      &to DEF                        &to UPPER
             >;
         };
 
@@ -102,7 +100,7 @@
     &none        &kp UP     &none       &sys_reset &ext_power EP_TOG &none         &kp LT           &kp GT          &kp PIPE         &kp KP_EQUAL
     &kp LEFT     &kp DOWN   &kp RIGHT   &none      &kp BSLH          &kp AMPS      &kp LBRC         &kp RBRC        &kp CARET        &kp BSPC
     &sk LSHFT    &none      &none       &none      &bl BL_DEC        &bl BL_TOG    &bl BL_INC       &none           &bootloader      &kp ENTER
-    &kp LCTRL               &kp LALT                                 &hm OUT_TOG SPACE              &sl SYM                         &to DEF
+    &kp LCTRL               &kp LALT                                 &hm OUT_TOG SPACE          &to SYM                       &to DEF
             >;
         };
     };
